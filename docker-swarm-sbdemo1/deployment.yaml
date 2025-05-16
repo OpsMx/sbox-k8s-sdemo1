@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: docker-swarm-sbdemo1
+  name: docker-swarm-sbdemo1
+spec:
+  selector:
+    matchLabels:
+      app: docker-swarm-sbdemo1
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: docker-swarm-sbdemo1
+        ssd.admissionreview.accountname: production
+        ssd.admissionreview.appname: docker-swarm
+    spec:
+      containers:
+      - name: docker-swarm-sbdemo1
+        image: docker.io/opsmxssd/docker-swarm-sbdemo1:65ba7cf-2-noncritical
