@@ -4,4 +4,4 @@ resources:
 - deployment.yaml
 images:
 - name: docker.io/opsmxssd/docker-swarm-sbdemo1
-  newTag: 20c4118-3-noncritical
+  newTag: 5e7f1a7-4-critical
